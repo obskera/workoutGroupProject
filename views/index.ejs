@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Create Your VERY OWN Todolist!</h1>
-    <a href="/login"> Login</a>
-    <a href="/signup"> Signup</a>
-</body>
+    <link rel="stylesheet" href="css/cookieBanner.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <section id="bodySection" style='display: block'>
+      <h1>Workout Tracker</h1>
+      <a href="/login"> Login</a>
+      <a href="/signup"> Signup</a>
+      <button id="revokeCookiePerms">Revoke Cookie Permissions</button>
+    </section>
+<!-- 
+    I added this as a partial so it can be reused as needed, along with the section above to hide content behind banner, and a button to revoke cookie permissions; I also added a seperate cookie banner js and css file. It controls the fade in/out for elements.
+
+    We still need to actually make a cookie policy and link the 'a' tag in the banner to it (in ./views/partials/cookieBanner.ejs)
+-->
+    <%- include('./partials/cookieBanner.ejs') %>
+  </body>
 </html>
